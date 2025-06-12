@@ -124,12 +124,13 @@ export default function Home() {
               {[1, 2, 3].map((project) => (
                 <Card key={project} className="overflow-hidden">
                   <img
-                    src={`/placeholder.svg?height=250&width=500&text=Projet+${project}`}
-                    alt={`Projet ${project}`}
-                    width="500"
-                    height="250"
-                    className="object-cover w-full h-48"
+                    src="/profile.png"
+                    alt="Photo de profil"
+                    width={400}
+                    height={400}
+                    className="rounded-full aspect-square object-cover border-4 border-border bg-muted"
                   />
+
                   <CardContent className="p-4">
                     <h3 className="font-bold text-xl mb-2">Projet {project}</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
@@ -210,7 +211,7 @@ export default function Home() {
                 </Button>
                 <Button variant="outline" asChild>
                   <Link
-                    href="www.linkedin.com/in/saafi-iheb-8373211b8"
+                    href="https://linkedin.com/in/saafi-iheb-8373211b8"
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2"
