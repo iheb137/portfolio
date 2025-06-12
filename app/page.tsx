@@ -73,8 +73,8 @@ export default function Home() {
             </p>
             <div className="mt-6">
               <a
-                href="/IhebEDDINE-SAAFI .pdf" 
-                download="IhebEDDINEè-SAAFI .pdf"
+                href="/ihebEDDINE-SAAFI .pdf" 
+                download="ihebEDDINE-SAAFI .pdf"
                 className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90"
               >
                 <Download className="mr-2 h-5 w-5" />
