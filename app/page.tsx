@@ -154,8 +154,8 @@ export default function Home() {
                   alt="securinets Tek-UP"
                   className="w-32 h-32 object-cover rounded-lg mb-2 hover:scale-105 transition-transform"
                 />
-                <h3 className="text-xl font-semibold text-foreground">Hackathon 2024</h3>
-                <p className="text-muted-foreground text-center">Participation in a hackathon on cloud solutions.</p>
+                <h3 className="text-xl font-semibold text-foreground">securinets Tek-UP</h3>
+                <p className="text-muted-foreground text-center">Active member at Securinets Tek-Up</p>
               </Card>
               <Card className="p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
                 <img
