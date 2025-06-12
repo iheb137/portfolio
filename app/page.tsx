@@ -54,10 +54,10 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Votre Nom
+                  IHEBEDDINE SAAFI
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Développeur Web | Designer | Créatif
+                  Tech Lover | Cloud & DevOps Learner | Étudiant Ingénieur
                 </p>
               </div>
               <div className="space-x-4">
@@ -198,7 +198,7 @@ export default function Home() {
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-4">
                 <Mail className="h-6 w-6" />
                 <h3 className="font-medium">Email</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">votre.email@exemple.com</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">iheb.saafigroup@tek-up.de</p>
               </div>
               <div className="flex justify-center space-x-4">
                 <Button asChild>
@@ -224,7 +224,7 @@ export default function Home() {
       <footer className="w-full border-t py-6">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
           <p className="text-center text-sm leading-loose text-gray-500 dark:text-gray-400 md:text-left">
-            © {new Date().getFullYear()} Votre Nom. Tous droits réservés.
+            © {new Date().getFullYear()} IHEBEDDINE SAAFI. Tous droits réservés.
           </p>
           <div className="flex items-center gap-4">
             <Link href="https://github.com/votre-username" target="_blank" rel="noreferrer">
