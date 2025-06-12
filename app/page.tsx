@@ -1,14 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Github, Linkedin } from "lucide-react"
-import { HoverEffect } from "@/components/ui/card-hover-effect"
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea"; 
 
-const words = `As a DevOps-focused engineering student, I love bridging the gap between development and operations through automation and cloud solutions.
-
-.`
+const words = `As a DevOps-focused engineering student, I love bridging the gap between development and operations through automation and cloud solutions.`;
 
 export default function Home() {
   return (
@@ -21,7 +19,10 @@ export default function Home() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Bienvenue sur mon portfolio
               </h1>
-              <TextGenerateEffect words={words} />
+              <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+                {words}
+              </p>{" "}
+              {/* Remplace TextGenerateEffect par un texte statique */}
             </div>
             <div className="space-x-4">
               <Link href="#projects">
@@ -42,7 +43,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">À propos de moi</h2>
               <p className="mt-4 text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                I’m a passionate developer and DevOps engineering student with solid experience in full-stack development. I enjoy building high-performance, intuitive web applications using the latest technologies..
+                I’m a passionate developer and DevOps engineering student with solid experience in full-stack development. I enjoy building high-performance, intuitive web applications using the latest technologies.
               </p>
             </div>
             <div className="flex items-center justify-center">
@@ -60,12 +61,22 @@ export default function Home() {
       <section id="projects" className="w-full py-12 md:py-24 lg:py-32 border-y">
         <div className="container px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Mes Projets</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Mes Projets</h2>
             <p className="mt-4 text-gray-500 md:text-xl/relaxed dark:text-gray-400">
               Voici quelques-uns des projets sur lesquels j'ai travaillé récemment.
             </p>
           </div>
-          <HoverEffect items={projects} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mt-2 block">
+                  Voir sur GitHub
+                </a>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -92,12 +103,13 @@ export default function Home() {
                   <Linkedin className="h-6 w-6 hover:text-blue-500" />
                 </Link>
               </div>
+              <Textarea placeholder="Votre message..." className="mt-4 w-full max-w-md" />
             </div>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
 
 const projects = [
@@ -116,4 +128,4 @@ const projects = [
     description: "Application de gestion pour la location de véhicules haut de gamme.",
     link: "https://github.com/iheb137/iHar",
   },
-]
+];
