@@ -159,7 +159,7 @@ export default function Home() {
               </Card>
               <Card className="p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
                 <img
-                  src="/IEEE.jpeg" // Remplace par le chemin réel de ton image
+                  src="/IEEE.png" // Remplace par le chemin réel de ton image
                   alt="IEEE TEK-UP SB"
                   className="w-32 h-32 object-cover rounded-lg mb-2 hover:scale-105 transition-transform"
                 />
