@@ -245,12 +245,12 @@ export default function Home() {
 const projects = [
   {
     title: "Chatbot psychologique",
-    description: "An intelligent chatbot using AI to support users.",
+    description: "Dr Slimen est un chatbot psychologue intelligent, basé sur les LLMs et la technologie RAG, conçu pour offrir un soutien émotionnel personnalisé et confidentiel..",
     link: "https://github.com/iheb137/chatbot-ai",
   },
   {
     title: "Portfolio personnel",
-    description: "Dr Slimen est un chatbot psychologue intelligent, basé sur les LLMs et la technologie RAG, conçu pour offrir un soutien émotionnel personnalisé et confidentiel..",
+    description: "Portfolio personnel",
     link: "https://github.com/iheb137/portfolio",
   },
   {
