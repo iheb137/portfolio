@@ -73,8 +73,8 @@ export default function Home() {
             </p>
             <div className="mt-6">
               <a
-                href="/cv.pdf" // Remplace par le chemin réel de ton fichier CV
-                download="CV_IHEBEDDINE_SAAFI.pdf"
+                href="/IhebEDDINE SAAFI .pdf" 
+                download="IhebEDDINE SAAFI .pdf"
                 className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90"
               >
                 <Download className="mr-2 h-5 w-5" />
