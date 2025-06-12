@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className="flex flex-1 items-center justify-end space-x-2">
             <nav className="flex items-center">
-              <Link href="https://github.com/votre-username" target="_blank" rel="noreferrer">
+              <Link href="https://github.com/iheb137" target="_blank" rel="noreferrer">
                 <div className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-accent">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
@@ -79,9 +79,9 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">À propos de moi</div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Qui suis-je?</h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Je suis un développeur web passionné avec une expertise en création de sites web modernes et
-                  performants. J'aime résoudre des problèmes complexes et créer des expériences utilisateur
-                  exceptionnelles.
+                  Actuellement en deuxième année du cycle ingénieur en Génie Logiciel et Cloud Intelligent (GLCI) à Tek-Up, je me spécialise dans les technologies Cloud, la virtualisation et l’automatisation des processus de développement. Passionné par l’univers DevOps, je cherche à intégrer un environnement dynamique où je pourrai mettre en pratique mes compétences en CI/CD, conteneurisation (Docker, Kubernetes) et gestion d’infrastructure cloud (AWS). Curieux, rigoureux et orienté solution, je suis motivé à contribuer activement à la fluidité des cycles de développement et à l’amélioration continue des systèmes.
+
+
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild>
@@ -96,7 +96,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/profile.png?height=400&width=400"
                   alt="Photo de profil"
                   width="400"
                   height="400"
@@ -202,13 +202,13 @@ export default function Home() {
               </div>
               <div className="flex justify-center space-x-4">
                 <Button asChild>
-                  <Link href="mailto:votre.email@exemple.com" className="flex items-center gap-2">
+                  <Link href="iheb.saafigroup@tek-up.de" className="flex items-center gap-2">
                     <Mail className="h-4 w-4" /> M'envoyer un email
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
                   <Link
-                    href="https://linkedin.com/in/votre-username"
+                    href="www.linkedin.com/in/saafi-iheb-8373211b8"
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2"
