@@ -159,11 +159,11 @@ export default function Home() {
               </Card>
               <Card className="p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
                 <img
-                  src="/event2.jpg" // Remplace par le chemin réel de ton image
-                  alt="GLCI Club"
+                  src="/IEEE.jpeg" // Remplace par le chemin réel de ton image
+                  alt="IEEE TEK-UP SB"
                   className="w-32 h-32 object-cover rounded-lg mb-2 hover:scale-105 transition-transform"
                 />
-                <h3 className="text-xl font-semibold text-foreground">Member GLCI Club</h3>
+                <h3 className="text-xl font-semibold text-foreground">VICE-CHAIRMAN IEEE TEK-UP SB</h3>
                 <p className="text-muted-foreground text-center">Mentoring and organizing tech events.</p>
               </Card>
             </div>
