@@ -22,17 +22,15 @@ export default function Home() {
             </nav>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-2">
-            <nav className="flex items-center">
-              <Link href="https://github.com/iheb137" target="_blank" rel="noreferrer">
-                <div className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-accent">
+            <nav className="flex items-center space-x-2">
+              <Link href="https://github.com/iheb137" target="_blank" rel="noopener noreferrer">
+                <div className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-accent" aria-label="GitHub">
                   <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
                 </div>
               </Link>
-              <Link href="https://linkedin.com/in/saafi-iheb-8373211b8" target="_blank" rel="noreferrer">
-                <div className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-accent">
+              <Link href="https://linkedin.com/in/saafi-iheb-8373211b8" target="_blank" rel="noopener noreferrer">
+                <div className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-accent" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
                 </div>
               </Link>
             </nav>
@@ -83,7 +81,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <Image
                   src="/profile.png"
-                  alt="Photo de profil"
+                  alt="Photo de profil de Saafi"
                   width={300}
                   height={300}
                   className="rounded-full border-4 border-border object-cover"
@@ -109,7 +107,7 @@ export default function Home() {
                 <Card key={project} className="overflow-hidden">
                   <Image
                     src="/profile.png"
-                    alt="Aperçu du projet"
+                    alt={`Aperçu du projet ${project}`}
                     width={400}
                     height={400}
                     className="rounded-t-md object-cover w-full h-48"
@@ -119,12 +117,16 @@ export default function Home() {
                     <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                       Description courte du projet {project}. Technologies utilisées et objectifs.
                     </p>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center gap-2">
                       <Button variant="outline" size="sm" asChild>
-                        <a href="#"><ExternalLink className="h-4 w-4" /> Démo</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-1" /> Démo
+                        </a>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <a href="#"><Github className="h-4 w-4" /> Code</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-1" /> Code
+                        </a>
                       </Button>
                     </div>
                   </CardContent>
