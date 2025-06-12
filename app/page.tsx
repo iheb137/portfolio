@@ -97,11 +97,11 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
               <Image
-                src="/profile.png"
-                alt="Photo de profil"
-                width={400}
-                height={400}
-                className="rounded-full aspect-square object-cover border-4 border-border bg-muted"
+                src={`/placeholder.svg?height=250&width=500&text=Projet+${project}`}Add commentMore actions
+                    alt={`Projet ${project}`}
+                    width="500"
+                    height="250"
+                    className="object-cover w-full h-48"
                />
         
               </div>
