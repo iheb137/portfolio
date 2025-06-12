@@ -150,8 +150,8 @@ export default function Home() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <Card className="p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
                 <img
-                  src="/event1.jpg" // Remplace par le chemin réel de ton image
-                  alt="Hackathon 2024"
+                  src="/sec.jpeg" // Remplace par le chemin réel de ton image
+                  alt="securinets Tek-UP"
                   className="w-32 h-32 object-cover rounded-lg mb-2 hover:scale-105 transition-transform"
                 />
                 <h3 className="text-xl font-semibold text-foreground">Hackathon 2024</h3>
@@ -164,7 +164,9 @@ export default function Home() {
                   className="w-32 h-32 object-cover rounded-lg mb-2 hover:scale-105 transition-transform"
                 />
                 <h3 className="text-xl font-semibold text-foreground">VICE-CHAIRMAN IEEE TEK-UP SB</h3>
-                <p className="text-muted-foreground text-center">Mentoring and organizing tech events.</p>
+                <p className="text-muted-foreground text-center">As Vice Chair of the IEEE Tek-Up Student Branch, I assist the Chair in leading the branch, coordinate activities and events, support member engagement, and help foster a collaborative environment to promote technical knowledge and professional development among students.
+
+</p>
               </Card>
             </div>
           </div>
