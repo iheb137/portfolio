@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-background">
       {/* HERO */}
-      <section className="w-full py-12 md:py-24 lg:py-32 border border-border bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <section className="w-full py-12 md:py-24 lg:py-32 border border-border bg-[url('/background.webp')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
