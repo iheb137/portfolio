@@ -250,12 +250,17 @@ const projects = [
   },
   {
     title: "Portfolio personnel",
-    description: "My online portfolio to showcase my skills and projects.",
+    description: "Dr Slimen est un chatbot psychologue intelligent, basé sur les LLMs et la technologie RAG, conçu pour offrir un soutien émotionnel personnalisé et confidentiel..",
     link: "https://github.com/iheb137/portfolio",
   },
   {
     title: "iHar - Luxury Car Rental",
     description: "A management application for luxury vehicle rentals.",
-    link: "https://github.com/iheb137/iHar",
+    link: "https://github.com/iheb137/iHar---Luxury-Car-Rental",
+  },
+  {
+    title: "Gestion-de-clinique-",
+    description: "Projet Java de gestion de clinique médicale développé avec JavaFX pour l’interface graphique, intégrant une base de données pour la gestion des patients, des rendez-vous, et du personnel médical..",
+    link: "https://github.com/iheb137/Gestion-de-clinique-",
   },
 ];
