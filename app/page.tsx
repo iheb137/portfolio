@@ -102,11 +102,23 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center">
-                {/* Photo de profil simplifiée */}
-                <div className="w-[300px] h-[300px] rounded-full border-4 border-border bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-6xl">IS</span>
-                </div>
-              </div>
+                <div className="relative w-[300px] h-[300px]">
+               <img
+               src="/profile.jpg"
+               alt="Photo de profil d'Ihebeddine Saafi"
+               className="w-full h-full rounded-full border-4 border-border object-cover"
+              onError={(e) => {
+        // Fallback si l'image ne se charge pas
+        e.target.style.display = 'none';
+        e.target.nextElementSibling.style.display = 'flex';
+      }}
+    />
+    {/* Fallback avec initiales */}
+    <div className="absolute inset-0 w-full h-full rounded-full border-4 border-border bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center" style={{display: 'none'}}>
+      <span className="text-white font-bold text-6xl">IS</span>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </section>
@@ -239,7 +251,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact</div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Travaillons ensemble</h2>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  N'hésitez pas à me contacter pour discuter d'opportunités ou de projets DevOps.
+                  N'hésitez pas à me contacter pour discuter d'opportunités ou de projets .
                 </p>
               </div>
             </div>
@@ -251,7 +263,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center space-x-4">
                 <Button asChild>
-                  <Link href="mailto:saafi.ihebeddine@example.com" className="flex items-center gap-2">
+                  <Link href="iheb.saafigroup@tek-up.de" className="flex items-center gap-2">
                     <Mail className="h-4 w-4" /> M'envoyer un email
                   </Link>
                 </Button>
