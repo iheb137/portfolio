@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Github, Mail, Linkedin, ExternalLink } from "lucide-react"
-import Image from "next/image"
 
 export default function Home() {
   return (
@@ -96,33 +95,16 @@ export default function Home() {
                     <Link href="#contact">Me contacter</Link>
                   </Button>
                   <Button variant="outline" asChild>
-                    <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       Télécharger mon CV
                     </a>
                   </Button>
                 </div>
               </div>
               <div className="flex justify-center">
-                {/* Photo de profil avec fallback */}
-                <div className="relative">
-                  <div className="w-[300px] h-[300px] rounded-full border-4 border-border bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/profile.png"
-                      alt="Photo de profil d'Ihebeddine Saafi"
-                      width={300}
-                      height={300}
-                      className="rounded-full object-cover"
-                      priority
-                      onError={(e) => {
-                        // Fallback en cas d'erreur de chargement
-                        e.currentTarget.style.display = "none"
-                        e.currentTarget.nextElementSibling.style.display = "flex"
-                      }}
-                    />
-                    <div className="absolute inset-0 hidden items-center justify-center">
-                      <span className="text-white font-bold text-6xl">IS</span>
-                    </div>
-                  </div>
+                {/* Photo de profil simplifiée */}
+                <div className="w-[300px] h-[300px] rounded-full border-4 border-border bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                  <span className="text-white font-bold text-6xl">IS</span>
                 </div>
               </div>
             </div>
