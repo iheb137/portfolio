@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Github, Linkedin } from "lucide-react"
 import { HoverEffect } from "@/components/ui/card-hover-effect"
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
