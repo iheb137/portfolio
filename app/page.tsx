@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Github, Mail, Linkedin, ExternalLink } from "lucide-react"
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -95,13 +96,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center">
-                <img
-                  src="/profile.png?height=400&width=400"
-                  alt="Photo de profil"
-                  width="400"
-                  height="400"
-                  className="rounded-full aspect-square object-cover border-4 border-border bg-muted"
-                />
+              <Image
+  src="/profile.png"
+  alt="Photo de profil"
+  width={400}
+  height={400}
+  className="rounded-full aspect-square object-cover border-4 border-border bg-muted"
+/>
+        
               </div>
             </div>
           </div>
