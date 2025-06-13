@@ -1,10 +1,11 @@
 import type React from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Navigation } from "@/components/navigation"
 
 export const metadata = {
-  title: "Mon Portfolio",
-  description: "Portfolio personnel présentant mes projets et compétences",
+  title: "IHEBEDDINE SAAFI - Portfolio",
+  description: "Portfolio professionnel de IHEBEDDINE SAAFI - Étudiant DevOps Engineer",
 }
 
 export default function RootLayout({
@@ -15,9 +16,10 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head />
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
+      <body className="dark bg-gray-950 text-gray-100">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <Navigation />
+          <main className="pt-20">{children}</main>
         </ThemeProvider>
       </body>
     </html>
