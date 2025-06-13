@@ -1,18 +1,61 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useState } from "react"
 
 export default function EventsPage() {
-  const [imageErrors, setImageErrors] = useState<{ [key: string]: boolean }>({})
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState(0)
 
-  const handleImageError = (imageName: string) => {
-    setImageErrors((prev) => ({ ...prev, [imageName]: true }))
-    console.error(`Erreur de chargement pour l'image: ${imageName}`)
+  const eventImages = [
+    {
+      src: "/event1.jpeg",
+      title: "Tek-Up Clubs Event 2025",
+      description: "Workshop technique et formation",
+    },
+    {
+      src: "/event2.jpeg",
+      title: "Workshop TSYP12",
+      description: "Cybersecurity workshop",
+    },
+    {
+      src: "/event3.jpeg", // Corrigé : event3.jpeg au lieu de evnt3.jpeg
+      title: "Team TSYP12",
+      description: "Activité d'équipe",
+    },
+    {
+      src: "/event4.jpg",
+      title: "TSYP12",
+      description: "Présentation technique",
+    },
+  ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % eventImages.length)
   }
 
-  const handleImageLoad = (imageName: string) => {
-    console.log(`Image chargée avec succès: ${imageName}`)
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + eventImages.length) % eventImages.length)
+  }
+
+  const openModal = (index: number) => {
+    setSelectedImage(index)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
+  const nextModalImage = () => {
+    setSelectedImage((prev) => (prev + 1) % eventImages.length)
+  }
+
+  const prevModalImage = () => {
+    setSelectedImage((prev) => (prev - 1 + eventImages.length) % eventImages.length)
   }
 
   return (
@@ -69,174 +112,152 @@ export default function EventsPage() {
           </Card>
         </div>
 
-        {/* Diagnostic des images */}
-        <Card className="p-6 bg-red-900/20 border border-red-800/50 rounded-lg mb-8">
-          <h3 className="text-red-400 font-semibold mb-4">🔍 Diagnostic des images</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-            <div className="space-y-2">
-              <p className="text-gray-300">event1.jpeg:</p>
-              <p className={imageErrors["event1"] ? "text-red-400" : "text-green-400"}>
-                {imageErrors["event1"] ? "❌ Erreur" : "✅ OK"}
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-gray-300">event2.jpeg:</p>
-              <p className={imageErrors["event2"] ? "text-red-400" : "text-green-400"}>
-                {imageErrors["event2"] ? "❌ Erreur" : "✅ OK"}
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-gray-300">evnt3.jpeg:</p>
-              <p className={imageErrors["evnt3"] ? "text-red-400" : "text-green-400"}>
-                {imageErrors["evnt3"] ? "❌ Erreur" : "✅ OK"}
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-gray-300">event4.jpg:</p>
-              <p className={imageErrors["event4"] ? "text-red-400" : "text-green-400"}>
-                {imageErrors["event4"] ? "❌ Erreur" : "✅ OK"}
-              </p>
-            </div>
-          </div>
-        </Card>
-
-        {/* Galerie d'événements */}
+        {/* Slider de la galerie */}
         <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700">
-          <div className="text-center space-y-6">
-            <h3 className="text-2xl font-bold text-gray-100">Galerie d'événements</h3>
-            <p className="text-gray-400">Mes moments marquants lors des événements et activités associatives</p>
+          <div className="text-center space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-100 mb-4">Galerie d'événements</h3>
+              <p className="text-gray-400">Mes moments marquants lors des événements et activités associatives</p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              {/* Photo 1 - event1.jpeg */}
-              <div className="group relative overflow-hidden rounded-lg border-2 border-gray-700 hover:border-blue-500/50 transition-all duration-300">
-                {imageErrors["event1"] ? (
-                  <div className="w-full h-64 bg-red-900/30 border-2 border-red-700 flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <p className="text-red-400 font-semibold">❌ Erreur</p>
-                      <p className="text-red-300 text-sm">/event1.jpeg</p>
-                      <p className="text-red-200 text-xs">Image non trouvée</p>
+            {/* Slider principal */}
+            <div className="relative max-w-4xl mx-auto">
+              <div className="relative overflow-hidden rounded-xl border-2 border-gray-700">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {eventImages.map((image, index) => (
+                    <div key={index} className="w-full flex-shrink-0">
+                      <div className="relative group cursor-pointer" onClick={() => openModal(index)}>
+                        <img
+                          src={image.src || "/placeholder.svg"}
+                          alt={image.title}
+                          className="w-full h-96 object-contain bg-gray-800 hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            e.currentTarget.src = "/placeholder.svg?height=384&width=600"
+                            e.currentTarget.alt = "Image non disponible"
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="absolute bottom-6 left-6 right-6 text-left">
+                            <h4 className="text-white font-bold text-xl mb-2">{image.title}</h4>
+                            <p className="text-gray-200">{image.description}</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <img
-                    src="/event1.jpeg"
-                    alt="Événement 1"
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={() => handleImageError("event1")}
-                    onLoad={() => handleImageLoad("/event1.jpeg")}
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-white font-semibold">Événement IEEE</h4>
-                    <p className="text-gray-300 text-sm">Workshop technique</p>
-                  </div>
+                  ))}
                 </div>
+
+                {/* Boutons de navigation */}
+                <Button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+                  size="sm"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+                <Button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+                  size="sm"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
               </div>
 
-              {/* Photo 2 - event2.jpeg */}
-              <div className="group relative overflow-hidden rounded-lg border-2 border-gray-700 hover:border-red-500/50 transition-all duration-300">
-                {imageErrors["event2"] ? (
-                  <div className="w-full h-64 bg-red-900/30 border-2 border-red-700 flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <p className="text-red-400 font-semibold">❌ Erreur</p>
-                      <p className="text-red-300 text-sm">/event2.jpeg</p>
-                      <p className="text-red-200 text-xs">Image non trouvée</p>
-                    </div>
-                  </div>
-                ) : (
-                  <img
-                    src="/event2.jpeg"
-                    alt="Événement 2"
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={() => handleImageError("event2")}
-                    onLoad={() => handleImageLoad("/event2.jpeg")}
+              {/* Indicateurs de slide */}
+              <div className="flex justify-center space-x-2 mt-6">
+                {eventImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide ? "bg-blue-500 scale-125" : "bg-gray-600 hover:bg-gray-500"
+                    }`}
                   />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-white font-semibold">Securinets Event</h4>
-                    <p className="text-gray-300 text-sm">Cybersecurity workshop</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Photo 3 - evnt3.jpeg */}
-              <div className="group relative overflow-hidden rounded-lg border-2 border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                {imageErrors["evnt3"] ? (
-                  <div className="w-full h-64 bg-red-900/30 border-2 border-red-700 flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <p className="text-red-400 font-semibold">❌ Erreur</p>
-                      <p className="text-red-300 text-sm">/evnt3.jpeg</p>
-                      <p className="text-red-200 text-xs">Image non trouvée</p>
-                    </div>
-                  </div>
-                ) : (
-                  <img
-                    src="/evnt3.jpeg"
-                    alt="Événement 3"
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={() => handleImageError("evnt3")}
-                    onLoad={() => handleImageLoad("/evnt3.jpeg")}
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-white font-semibold">Team Building</h4>
-                    <p className="text-gray-300 text-sm">Activité d'équipe</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Photo 4 - event4.jpg */}
-              <div className="group relative overflow-hidden rounded-lg border-2 border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                {imageErrors["event4"] ? (
-                  <div className="w-full h-64 bg-red-900/30 border-2 border-red-700 flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <p className="text-red-400 font-semibold">❌ Erreur</p>
-                      <p className="text-red-300 text-sm">/event4.jpg</p>
-                      <p className="text-red-200 text-xs">Image non trouvée</p>
-                    </div>
-                  </div>
-                ) : (
-                  <img
-                    src="/event4.jpg"
-                    alt="Événement 4"
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={() => handleImageError("event4")}
-                    onLoad={() => handleImageLoad("/event4.jpg")}
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-white font-semibold">Tech Conference</h4>
-                    <p className="text-gray-300 text-sm">Présentation technique</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Instructions de dépannage */}
+            {/* Miniatures */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {eventImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`relative cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                    index === currentSlide ? "border-blue-500 scale-105" : "border-gray-700 hover:border-gray-500"
+                  }`}
+                  onClick={() => setCurrentSlide(index)}
+                >
+                  <img
+                    src={image.src || "/placeholder.svg"}
+                    alt={image.title}
+                    className="w-full h-24 object-contain bg-gray-800"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg?height=96&width=150"
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors duration-300" />
+                </div>
+              ))}
+            </div>
+
+            {/* Instructions */}
             <div className="mt-8 p-4 bg-blue-900/20 border border-blue-800/50 rounded-lg">
-              <h4 className="text-blue-400 font-semibold mb-3">🔧 Étapes de dépannage :</h4>
-              <div className="text-left space-y-2 text-sm text-blue-300">
-                <p>
-                  <strong>1.</strong> Vérifiez que les fichiers sont dans <code>public/</code>
-                </p>
-                <p>
-                  <strong>2.</strong> Redémarrez votre serveur de développement (<code>npm run dev</code>)
-                </p>
-                <p>
-                  <strong>3.</strong> Vérifiez la console du navigateur (F12) pour les erreurs
-                </p>
-                <p>
-                  <strong>4.</strong> Essayez d'accéder directement : <code>localhost:3000/event1.jpeg</code>
-                </p>
-              </div>
+              <p className="text-blue-400 text-sm">
+                💡 <strong>Navigation :</strong> Utilisez les flèches, cliquez sur les points ou les miniatures. Cliquez
+                sur une image pour l'agrandir !
+              </p>
             </div>
           </div>
         </Card>
       </div>
+
+      {/* Modal plein écran */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+          <div className="relative max-w-6xl max-h-full">
+            <img
+              src={eventImages[selectedImage].src || "/placeholder.svg"}
+              alt={eventImages[selectedImage].title}
+              className="max-w-full max-h-[90vh] object-contain"
+            />
+
+            {/* Bouton fermer */}
+            <Button
+              onClick={closeModal}
+              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+              size="sm"
+            >
+              <X className="h-6 w-6" />
+            </Button>
+
+            {/* Navigation dans le modal */}
+            <Button
+              onClick={prevModalImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+              size="sm"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            <Button
+              onClick={nextModalImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+              size="sm"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+
+            {/* Info de l'image */}
+            <div className="absolute bottom-4 left-4 right-4 text-center">
+              <h4 className="text-white font-bold text-xl mb-2">{eventImages[selectedImage].title}</h4>
+              <p className="text-gray-200">{eventImages[selectedImage].description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
