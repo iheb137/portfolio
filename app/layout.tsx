@@ -1,8 +1,7 @@
 import type React from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Navigation } from "@/components/navigation"
-
+import { Navigation } from "@/components/ui/navigation"
 export const metadata = {
   title: "IHEBEDDINE SAAFI - Portfolio",
   description: "Portfolio professionnel de IHEBEDDINE SAAFI - Étudiant DevOps Engineer",
