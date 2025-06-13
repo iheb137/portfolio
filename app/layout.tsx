@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 export const metadata = {
   title: "Mon Portfolio",
   description: "Portfolio personnel présentant mes projets et compétences",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
