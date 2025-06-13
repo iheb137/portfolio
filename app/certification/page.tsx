@@ -1,7 +1,7 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { Award, Plus } from "lucide-react"
+import { Award, Plus } from 'lucide-react'
 
 export default function CertificationsPage() {
   return (
