@@ -14,7 +14,7 @@ export default function EventsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Securinets */}
-          <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-red-600/50 transition-all duration-300">
+          <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-blue-600/50 transition-all duration-500 transform hover:-translate-y-2">
             <div className="space-y-6">
               <div className="text-center">
                 <img
@@ -37,7 +37,7 @@ export default function EventsPage() {
           </Card>
 
           {/* IEEE */}
-          <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-blue-600/50 transition-all duration-300">
+          <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-blue-600/50 transition-all duration-500 transform hover:-translate-y-2">
             <div className="space-y-6">
               <div className="text-center">
                 <img src="/IEEE.png" alt="IEEE TEK-UP SB" className="w-32 h-32 object-cover rounded-xl mx-auto mb-4" />
