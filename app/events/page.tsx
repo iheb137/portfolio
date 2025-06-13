@@ -14,22 +14,22 @@ export default function EventsPage() {
     {
       src: "/event1.jpeg",
       title: "Tek-Up Clubs Event 2025",
-      description: "Workshop technique et formation",
+      description: "",
     },
     {
       src: "/event2.jpeg",
       title: "Workshop TSYP12",
-      description: "Cybersecurity workshop",
+      description: "",
     },
     {
       src: "/event3.jpeg", // Corrigé : event3.jpeg au lieu de evnt3.jpeg
       title: "Team TSYP12",
-      description: "Activité d'équipe",
+      description: "",
     },
     {
       src: "/event4.jpg",
       title: "TSYP12",
-      description: "Présentation technique",
+      description: "",
     },
   ]
 
