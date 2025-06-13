@@ -483,16 +483,28 @@ export default function Home() {
                       </div>
 
                       <div className="flex items-center justify-between pt-4 border-t border-gray-700">
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/link inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
-                        >
-                          <Github className="mr-2 h-4 w-4 group-hover/link:rotate-12 transition-transform" />
-                          View on GitHub
-                          <ExternalLink className="ml-1 h-3 w-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
-                        </a>
+                        <div className="flex items-center gap-4">
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/link inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                          >
+                            <Github className="mr-2 h-4 w-4 group-hover/link:rotate-12 transition-transform" />
+                            GitHub
+                          </a>
+                          {project.demo && (
+                            <a
+                              href={project.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group/link inline-flex items-center text-green-400 hover:text-green-300 font-medium transition-colors"
+                            >
+                              <ExternalLink className="mr-2 h-4 w-4 group-hover/link:rotate-12 transition-transform" />
+                              Demo
+                            </a>
+                          )}
+                        </div>
                         <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                       </div>
                     </div>
@@ -563,21 +575,25 @@ const projects = [
     description:
       "Dr Slimen est un chatbot psychologue intelligent, basé sur les LLMs et la technologie RAG, conçu pour offrir un soutien émotionnel personnalisé et confidentiel.",
     link: "https://github.com/iheb137/chatbot-ai",
+    demo: "https://chatbot-psychologique.vercel.app",
   },
   {
     title: "Portfolio personnel",
     description: "Portfolio personnel",
     link: "https://github.com/iheb137/portfolio",
+    demo: "https://iheb-portfolio.vercel.app",
   },
   {
     title: "iHar - Luxury Car Rental",
     description: "A management application for luxury vehicle rentals.",
     link: "https://github.com/iheb137/iHar---Luxury-Car-Rental",
+    demo: "https://ihar-rental.vercel.app",
   },
   {
     title: "Gestion-de-clinique-",
     description:
       "Projet Java de gestion de clinique médicale développé avec JavaFX pour l'interface graphique, intégrant une base de données pour la gestion des patients, des rendez-vous, et du personnel médical..",
     link: "https://github.com/iheb137/Gestion-de-clinique-",
+    demo: null,
   },
 ]
