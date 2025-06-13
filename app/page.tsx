@@ -121,17 +121,36 @@ export default function Home() {
             </p>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
               <Card className="p-4 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-foreground">DevOps</h3>
-                <p className="text-muted-foreground">CI/CD, Kubernetes, Docker</p>
+                <h3 className="text-xl font-semibold text-foreground">System & Linux</h3>
+                <p className="text-muted-foreground">Ubuntu, CentOS,RED HAT, SSH, KALI</p>
               </Card>
               <Card className="p-4 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-foreground">Cloud</h3>
-                <p className="text-muted-foreground">AWS, Azure</p>
+                <h3 className="text-xl font-semibold text-foreground">DevOps & Cloud</h3>
+                <p className="text-muted-foreground">Docker, Kubernetes (basics), CI/CD (GitHub Actions), AWS (EC2, S3), VirtualBox, VMware, Git, GitHub</p>
               </Card>
               <Card className="p-4 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-foreground">Development</h3>
-                <p className="text-muted-foreground">React, Node.js, Python</p>
+                <h3 className="text-xl font-semibold text-foreground">Web Development</h3>
+                <p className="text-muted-foreground">HTML, CSS, JavaScript, PHP (basics), Next.js (frontend), Tailwind CSS</p>
+                </Card>
+              <Card className="p-4 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-foreground">Programming & Object-Oriented Development</h3>
+                <p className="text-muted-foreground">Java (OOP, JavaFX), Python (OOP, scripting)</p>
               </Card>
+               <Card className="p-4 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-foreground">Database Management</h3>
+                <p className="text-muted-foreground">MySQL, XAMPP, basic SQL queries, database design & integration</p>
+              </Card>
+              <Card className="p-4 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-foreground">Tools & Environments</h3>
+                <p className="text-muted-foreground">IntelliJ IDEA, VS Code, Cursor, XAMPP</p>
+              </Card>
+              <Card className="p-4 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-foreground"> Artificial Intelligence & Generative AI</h3>
+                <p className="text-muted-foreground">Prompt Engineering,LLM Integration,RAG (Retrieval-Augmented Generation),Memory in Chatbots,AI Tools: LangChain (basics), Ollama</p>
+              </Card>
+
+
+
             </div>
           </div>
         </div>
@@ -230,10 +249,6 @@ export default function Home() {
                   <Linkedin className="h-6 w-6 hover:text-primary" />
                 </Link>
               </div>
-              <Textarea
-                placeholder="Your message..."
-                className="mt-4 w-full max-w-md border-input bg-background text-foreground focus:border-primary"
-              />
             </div>
           </div>
         </div>
