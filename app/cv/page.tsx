@@ -28,7 +28,7 @@ export default function CVPage() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-100">CV - IHEBEDDINE SAAFI</h3>
-                <p className="text-gray-400">Last updated: December 2024</p>
+                <p className="text-gray-400">Last updated: June 2025</p>
               </div>
             </div>
 
