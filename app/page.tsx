@@ -79,15 +79,20 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-950">
     <div
-  className="min-h-screen bg-cover bg-center"
-  style={{ backgroundImage: "url('/background.webp')" }}>
-</div>
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-gray-900/20"></div>
+      className="min-h-screen bg-gray-950 relative"
+      style={{
+        backgroundImage: "url('/background.webp')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay foncé pour meilleure lisibilité */}
+      <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
 
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 overflow-hidden z-10">
         {/* Animated particles */}
         <div className="absolute inset-0">
           {[...Array(30)].map((_, i) => (
@@ -104,7 +109,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 relative z-20">
           <div
             className={`text-center space-y-8 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -163,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* Navigation Cards */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-950">
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-950 relative z-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Explore my portfolio</h2>
@@ -209,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Quick Contact */}
-      <section className="py-16 bg-gray-950">
+      <section className="py-16 bg-gray-950 relative z-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-100">Ready to collaborate?</h3>
