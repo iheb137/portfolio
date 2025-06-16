@@ -80,6 +80,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-950">
+    <div
+  className="min-h-screen bg-cover bg-center"
+  style={{ backgroundImage: "url('/background.webp')" }}>
+</div>
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-gray-900/20"></div>
