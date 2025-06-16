@@ -6,47 +6,47 @@ import { ArrowRight, User, FileText, Award, Code, Calendar, Briefcase, Mail } fr
 import { Card } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 
-const words = `Étudiant DevOps Engineer passionné par l'automatisation et les solutions cloud`
+const words = `DevOps Engineer student passionate about automation and cloud solutions`
 
 const navigationCards = [
   {
-    title: "À propos de moi",
-    description: "Découvrez mon parcours et ma passion pour le DevOps",
+    title: "About Me",
+    description: "Learn about my background and passion for DevOps",
     href: "/about",
     icon: User,
     gradient: "from-blue-600 to-cyan-600",
   },
   {
-    title: "Mon CV",
-    description: "Consultez et téléchargez mon curriculum vitae",
+    title: "My Resume",
+    description: "View and download my resume",
     href: "/cv",
     icon: FileText,
     gradient: "from-green-600 to-emerald-600",
   },
   {
     title: "Certifications",
-    description: "Mes certifications et qualifications professionnelles",
+    description: "My professional certifications and qualifications",
     href: "/certifications",
     icon: Award,
     gradient: "from-orange-600 to-red-600",
   },
   {
-    title: "Compétences",
-    description: "Mes compétences techniques et outils maîtrisés",
+    title: "Skills",
+    description: "My technical skills and tools I master",
     href: "/skills",
     icon: Code,
     gradient: "from-purple-600 to-pink-600",
   },
   {
-    title: "Événements",
-    description: "Mes participations et activités associatives",
+    title: "Events",
+    description: "My participation in events and club activities",
     href: "/events",
     icon: Calendar,
     gradient: "from-indigo-600 to-purple-600",
   },
   {
-    title: "Projets",
-    description: "Découvrez mes réalisations et projets techniques",
+    title: "Projects",
+    description: "Explore my work and technical projects",
     href: "/projects",
     icon: Briefcase,
     gradient: "from-teal-600 to-blue-600",
@@ -60,7 +60,7 @@ export default function Home() {
   useEffect(() => {
     setIsVisible(true)
 
-    // Animation de frappe
+    // Typing animation
     const wordsArray = words.split(" ")
     let currentText = ""
     let wordIndex = 0
@@ -84,7 +84,7 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-gray-900/20"></div>
 
-        {/* Particules animées */}
+        {/* Animated particles */}
         <div className="absolute inset-0">
           {[...Array(30)].map((_, i) => (
             <div
@@ -106,7 +106,7 @@ export default function Home() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            {/* Photo de profil */}
+            {/* Profile photo */}
             <div className="flex justify-center mb-8">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -139,7 +139,7 @@ export default function Home() {
                 <Link href="/about">
                   <Button className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                     <User className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                    Découvrir mon profil
+                    View my profile
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -149,7 +149,7 @@ export default function Home() {
                     className="group border-gray-600 text-gray-100 hover:bg-gray-800/50 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
                   >
                     <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                    Me contacter
+                    Contact me
                   </Button>
                 </Link>
               </div>
@@ -162,9 +162,9 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-950">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Explorez mon portfolio</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Explore my portfolio</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Découvrez mes compétences, projets et expériences à travers les différentes sections
+              Discover my skills, projects, and experiences through the different sections
             </p>
           </div>
 
@@ -204,18 +204,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact rapide */}
+      {/* Quick Contact */}
       <section className="py-16 bg-gray-950">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-100">Prêt à collaborer ?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-100">Ready to collaborate?</h3>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              N'hésitez pas à me contacter pour discuter de vos projets ou opportunités
+              Feel free to reach out to discuss your projects or opportunities
             </p>
             <Link href="/contact">
               <Button className="group bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                 <Mail className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Contactez-moi
+                Contact me
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

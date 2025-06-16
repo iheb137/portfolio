@@ -7,14 +7,14 @@ export default function SkillsPage() {
   return (
     <div className="min-h-screen bg-gray-950">
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* En-tête */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">Mes Compétences</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Technologies et outils que je maîtrise</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">My Skills</h1>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Technologies and tools I master</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Compétence 1 */}
+          {/* Skill 1 */}
           <Card className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-green-600/50 transition-all duration-300">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -27,7 +27,7 @@ export default function SkillsPage() {
             </div>
           </Card>
 
-          {/* Compétence 2 */}
+          {/* Skill 2 */}
           <Card className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-blue-600/50 transition-all duration-300">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -40,7 +40,7 @@ export default function SkillsPage() {
             </div>
           </Card>
 
-          {/* Compétence 3 */}
+          {/* Skill 3 */}
           <Card className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-purple-600/50 transition-all duration-300">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -53,7 +53,7 @@ export default function SkillsPage() {
             </div>
           </Card>
 
-          {/* Compétence 4 */}
+          {/* Skill 4 */}
           <Card className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-orange-600/50 transition-all duration-300">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -66,7 +66,7 @@ export default function SkillsPage() {
             </div>
           </Card>
 
-          {/* Compétence 5 */}
+          {/* Skill 5 */}
           <Card className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-indigo-600/50 transition-all duration-300">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -79,7 +79,7 @@ export default function SkillsPage() {
             </div>
           </Card>
 
-          {/* Compétence 6 */}
+          {/* Skill 6 */}
           <Card className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-pink-600/50 transition-all duration-300">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">

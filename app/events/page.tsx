@@ -18,12 +18,12 @@ export default function EventsPage() {
     },
     {
       src: "/event2.jpeg",
-      title: "Workshop TSYP12",
+      title: "TSYP12 Workshop",
       description: "",
     },
     {
-      src: "/event3.jpeg", // Corrigé : event3.jpeg au lieu de evnt3.jpeg
-      title: "Team TSYP12",
+      src: "/event3.jpeg",
+      title: "TSYP12 Team",
       description: "",
     },
     {
@@ -61,10 +61,10 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-gray-950">
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* En-tête */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">Événements & Activités</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Mes participations et engagements associatifs</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">Events & Activities</h1>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">My involvement and associative commitments</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -78,14 +78,14 @@ export default function EventsPage() {
                   className="w-32 h-32 object-cover rounded-xl mx-auto mb-4"
                 />
                 <h3 className="text-xl font-bold text-gray-100">Securinets Tek-UP</h3>
-                <p className="text-gray-400">Membre actif</p>
+                <p className="text-gray-400">Active member</p>
               </div>
               <div className="space-y-3">
-                <h4 className="font-semibold text-red-400">Activités :</h4>
+                <h4 className="font-semibold text-red-400">Activities:</h4>
                 <ul className="text-gray-300 text-sm space-y-1">
-                  <li>• Participation aux événements de cybersécurité</li>
-                  <li>• Workshops techniques et formations</li>
-                  <li>• Collaboration sur des projets de sécurité</li>
+                  <li>• Participation in cybersecurity events</li>
+                  <li>• Technical workshops and trainings</li>
+                  <li>• Collaboration on security projects</li>
                 </ul>
               </div>
             </div>
@@ -100,27 +100,27 @@ export default function EventsPage() {
                 <p className="text-gray-400">Vice-Chairman</p>
               </div>
               <div className="space-y-3">
-                <h4 className="font-semibold text-blue-400">Responsabilités :</h4>
+                <h4 className="font-semibold text-blue-400">Responsibilities:</h4>
                 <ul className="text-gray-300 text-sm space-y-1">
-                  <li>• Coordination des activités et événements</li>
-                  <li>• Support à l'engagement des membres</li>
-                  <li>• Promotion du développement technique</li>
-                  <li>• Leadership et collaboration</li>
+                  <li>• Coordination of activities and events</li>
+                  <li>• Support for member engagement</li>
+                  <li>• Promotion of technical development</li>
+                  <li>• Leadership and collaboration</li>
                 </ul>
               </div>
             </div>
           </Card>
         </div>
 
-        {/* Slider de la galerie */}
+        {/* Gallery slider */}
         <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700">
           <div className="text-center space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-100 mb-4">Galerie d'événements</h3>
-              <p className="text-gray-400">Mes moments marquants lors des événements et activités associatives</p>
+              <h3 className="text-2xl font-bold text-gray-100 mb-4">Events Gallery</h3>
+              <p className="text-gray-400">My most memorable moments during events and community activities</p>
             </div>
 
-            {/* Slider principal */}
+            {/* Main slider */}
             <div className="relative max-w-4xl mx-auto">
               <div className="relative overflow-hidden rounded-xl border-2 border-gray-700">
                 <div
@@ -136,7 +136,7 @@ export default function EventsPage() {
                           className="w-full h-96 object-contain bg-gray-800 hover:scale-105 transition-transform duration-300"
                           onError={(e) => {
                             e.currentTarget.src = "/placeholder.svg?height=384&width=600"
-                            e.currentTarget.alt = "Image non disponible"
+                            e.currentTarget.alt = "Image not available"
                           }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -150,7 +150,7 @@ export default function EventsPage() {
                   ))}
                 </div>
 
-                {/* Boutons de navigation */}
+                {/* Navigation buttons */}
                 <Button
                   onClick={prevSlide}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
@@ -167,7 +167,7 @@ export default function EventsPage() {
                 </Button>
               </div>
 
-              {/* Indicateurs de slide */}
+              {/* Slide indicators */}
               <div className="flex justify-center space-x-2 mt-6">
                 {eventImages.map((_, index) => (
                   <button
@@ -181,7 +181,7 @@ export default function EventsPage() {
               </div>
             </div>
 
-            {/* Miniatures */}
+            {/* Thumbnails */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {eventImages.map((image, index) => (
                 <div
@@ -207,15 +207,14 @@ export default function EventsPage() {
             {/* Instructions */}
             <div className="mt-8 p-4 bg-blue-900/20 border border-blue-800/50 rounded-lg">
               <p className="text-blue-400 text-sm">
-                💡 <strong>Navigation :</strong> Utilisez les flèches, cliquez sur les points ou les miniatures. Cliquez
-                sur une image pour l'agrandir !
+                💡 <strong>Navigation:</strong> Use the arrows, click the dots or thumbnails. Click on an image to zoom in!
               </p>
             </div>
           </div>
         </Card>
       </div>
 
-      {/* Modal plein écran */}
+      {/* Full-screen modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
           <div className="relative max-w-6xl max-h-full">
@@ -225,7 +224,7 @@ export default function EventsPage() {
               className="max-w-full max-h-[90vh] object-contain"
             />
 
-            {/* Bouton fermer */}
+            {/* Close button */}
             <Button
               onClick={closeModal}
               className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
@@ -234,7 +233,7 @@ export default function EventsPage() {
               <X className="h-6 w-6" />
             </Button>
 
-            {/* Navigation dans le modal */}
+            {/* Modal navigation */}
             <Button
               onClick={prevModalImage}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
@@ -250,7 +249,7 @@ export default function EventsPage() {
               <ChevronRight className="h-6 w-6" />
             </Button>
 
-            {/* Info de l'image */}
+            {/* Image info */}
             <div className="absolute bottom-4 left-4 right-4 text-center">
               <h4 className="text-white font-bold text-xl mb-2">{eventImages[selectedImage].title}</h4>
               <p className="text-gray-200">{eventImages[selectedImage].description}</p>

@@ -5,25 +5,25 @@ import { Code, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "Chatbot psychologique",
+    title: "Psychological Chatbot",
     description:
-      "Dr Slimen est un chatbot psychologue intelligent, basé sur les LLMs et la technologie RAG, conçu pour offrir un soutien émotionnel personnalisé et confidentiel.",
+      "Dr. Slimen is an intelligent psychologist chatbot, based on LLMs and RAG technology, designed to offer personalized and confidential emotional support.",
     link: "https://github.com/iheb137/chatbot-ai",
   },
   {
-    title: "Portfolio personnel",
-    description: "Portfolio personnel développé avec Next.js et Tailwind CSS",
+    title: "Personal Portfolio",
+    description: "Personal portfolio developed with Next.js and Tailwind CSS.",
     link: "https://github.com/iheb137/portfolio",
   },
   {
     title: "iHar - Luxury Car Rental",
-    description: "Application de gestion de location de véhicules de luxe",
+    description: "Luxury car rental management application.",
     link: "https://github.com/iheb137/iHar---Luxury-Car-Rental",
   },
   {
-    title: "Gestion de clinique",
+    title: "Clinic Management",
     description:
-      "Projet Java de gestion de clinique médicale développé avec JavaFX pour l'interface graphique, intégrant une base de données pour la gestion des patients, des rendez-vous, et du personnel médical.",
+      "Java project for managing a medical clinic, developed with JavaFX for the graphical interface, integrating a database for managing patients, appointments, and medical staff.",
     link: "https://github.com/iheb137/Gestion-de-clinique-",
   },
 ]
@@ -32,10 +32,10 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-gray-950">
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* En-tête */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">Mes Projets</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Découvrez mes réalisations techniques</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">My Projects</h1>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Explore my technical achievements</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
                   >
                     <Github className="mr-2 h-4 w-4" />
-                    Voir sur GitHub
+                    View on GitHub
                   </a>
                 </div>
               </div>
