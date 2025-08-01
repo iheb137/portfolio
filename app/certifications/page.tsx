@@ -8,7 +8,7 @@ export default function CertificationsPage() {
     {
       title: "DevOps Internship",
       company: "BIAT-IT",
-      logo: "/biat-logo.png", // Ajoutez le logo dans public/
+      logo: "/biat-logo.jpg", // Ajoutez le logo dans public/
       duration: "August 1, 2025 - Septembre 30, 2025",
       period: "2 months",
       description:
