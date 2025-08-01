@@ -6,13 +6,13 @@ import { useState } from "react"
 import { Menu, X, Home, User, FileText, Award, Code, Calendar, Briefcase, Mail } from "lucide-react"
 
 const navigationItems = [
-  { name: "Accueil", href: "/", icon: Home },
-  { name: "À propos", href: "/about", icon: User },
-  { name: "Mon CV", href: "/cv", icon: FileText },
+  { name: "Home", href: "/", icon: Home },
+  { name: "About", href: "/about", icon: User },
+  { name: "My Resume", href: "/cv", icon: FileText },
   { name: "Certifications", href: "/certifications", icon: Award },
-  { name: "Compétences", href: "/skills", icon: Code },
-  { name: "Événements", href: "/events", icon: Calendar },
-  { name: "Projets", href: "/projects", icon: Briefcase },
+  { name: "Skills", href: "/skills", icon: Code },
+  { name: "Events", href: "/events", icon: Calendar },
+  { name: "Projects", href: "/projects", icon: Briefcase },
   { name: "Contact", href: "/contact", icon: Mail },
 ]
 
