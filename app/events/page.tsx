@@ -34,8 +34,14 @@ export default function EventsPage() {
     {
       src: "/event5.jpeg",
       title: "TSYP13",
+      description: "This photo captures one of the final moments of my journey as IEEE Tek-Up SB Vice-Chair, standing beside the Chairman, @lbrahim_trad . It reflects not only the end of a mandate, but the culmination of dedication, challenges, growth, and unforgettable experiences. As I officially close this chapter, I carry forward the lessons learned, the bonds formed, and the pride of having served a community driven by passion, purpose, and shared ambition.",
+    },
+    {
+      src: "/event6.jpeg",
+      title: "TSYP13 Team",
       description: "",
     },
+    
   ]
 
   const nextSlide = () => {
