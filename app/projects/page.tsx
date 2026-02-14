@@ -32,7 +32,7 @@ const projects = [
   description:
     "DevOps setup for a Symfony PHP hotel management application. Includes Docker containerization with web and database services, database migrations and rollbacks using Doctrine Migrations, backup and restore scripts, logging and cache management, and CI/CD integration with PHPUnit tests. Security practices include HTTPS and environment-based secrets management.",
   link: "https://github.com/iheb137/hotel-management",
-}
+  },
    {
     title: "Smart Career Hub – Full Stack Career Management Web Platform",
     description:
