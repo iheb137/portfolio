@@ -32,7 +32,7 @@ export default function EventsPage() {
       description: "",
     },
     {
-      src: "/event5.jpg",
+      src: "/event5.jpeg",
       title: "TSYP13",
       description: "",
     },
