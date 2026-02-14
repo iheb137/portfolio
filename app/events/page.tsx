@@ -108,8 +108,7 @@ export default function EventsPage() {
               <div className="text-center">
                 <img src="/IEEE.png" alt="IEEE TEK-UP SB" className="w-32 h-32 object-cover rounded-xl mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-100">IEEE TEK-UP SB</h3>
-                <p className="text-gray-400">Vice-Chairman(01/01/2025 ==>31/12/2025)</p>
-                <p className="text-gray-400">Advisor IEEE TEK-UP SB (2026) </p>
+                <p className="text-gray-400">Vice-Chairman(01/01/2025 ==>31/12/2025) & Advisor IEEE TEK-UP SB (2026) </p>
               </div>
               <div className="space-y-3">
                 <h4 className="font-semibold text-blue-400">Responsibilities:</h4>
