@@ -31,6 +31,11 @@ export default function EventsPage() {
       title: "TSYP12",
       description: "",
     },
+    {
+      src: "/event5.jpg",
+      title: "TSYP13",
+      description: "",
+    },
   ]
 
   const nextSlide = () => {
