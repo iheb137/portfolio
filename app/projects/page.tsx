@@ -26,6 +26,13 @@ const projects = [
       "Java project for managing a medical clinic, developed with JavaFX for the graphical interface, integrating a database for managing patients, appointments, and medical staff.",
     link: "https://github.com/iheb137/Gestion-de-clinique-",
   },
+  {
+  title: "Hotel Management System - DevOps",
+  description:
+    "DevOps setup for a Symfony PHP hotel management application. Includes Docker containerization with web and database services, database migrations and rollbacks using Doctrine Migrations, backup and restore scripts, logging and cache management, and CI/CD integration with PHPUnit tests. Security practices include HTTPS and environment-based secrets management.",
+  link: "https://github.com/iheb137/hotel-management",
+}
+
 ]
 
 export default function ProjectsPage() {
