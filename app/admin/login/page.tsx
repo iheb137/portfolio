@@ -88,10 +88,9 @@ export default function AdminLoginPage() {
           </form>
 
           <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-950 rounded text-sm text-blue-900 dark:text-blue-100">
-            <p className="font-semibold">Identifiants par défaut:</p>
-            <p>Utilisateur: <code>admin</code></p>
-            <p>Mot de passe: <code>admin123</code></p>
-            <p className="mt-2 text-xs">⚠️ Changez ces identifiants en production!</p>
+            <p className="font-semibold">Identifiants:</p>
+            <p>Utilisateur: <code>lahlouba</code></p>
+            <p>Mot de passe: <code>chafroud#1999</code></p>
           </div>
         </CardContent>
       </Card>
