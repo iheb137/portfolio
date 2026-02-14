@@ -20,8 +20,7 @@ const projects = [
   description:
     "Luxury car rental management application built from scratch. Includes DevOps integration with a Jenkins pipeline for CI/CD, automated builds, tests, and deployment.",
   link: "https://github.com/iheb137/iHar---Luxury-Car-Rental",
-}
-
+  },
   {
     title: "Clinic Management",
     description:
