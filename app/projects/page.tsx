@@ -33,6 +33,14 @@ const projects = [
     "DevOps setup for a Symfony PHP hotel management application. Includes Docker containerization with web and database services, database migrations and rollbacks using Doctrine Migrations, backup and restore scripts, logging and cache management, and CI/CD integration with PHPUnit tests. Security practices include HTTPS and environment-based secrets management.",
   link: "https://github.com/iheb137/hotel-management",
 }
+   {
+    title: "Smart Career Hub – Full Stack Career Management Web Platform",
+    description:
+      "Innovative platform connecting students and companies to facilitate job search and internship opportunities. Built with Spring Boot 3, Angular 21, FastAPI, and PostgreSQL/MongoDB databases. Integrates AI (LLaMA 3) for CV analysis, personalized job recommendations, and fraud detection. Includes comprehensive admin system with predictive dashboard and user management. Technologies: Java 17, TypeScript, Python 3.10, REST APIs, JWT Authentication.
+
+Implemented roles: Candidate, Recruiter, Administrator",
+    link: "https://github.com/iheb137/Smart-career-hub",
+  },
 
 ]
 
