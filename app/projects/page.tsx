@@ -16,10 +16,12 @@ const projects = [
     link: "https://github.com/iheb137/portfolio",
   },
   {
-    title: "iHar - Luxury Car Rental",
-    description: "Luxury car rental management application.",
-    link: "https://github.com/iheb137/iHar---Luxury-Car-Rental",
-  },
+  title: "iHar - Luxury Car Rental",
+  description:
+    "Luxury car rental management application built from scratch. Includes DevOps integration with a Jenkins pipeline for CI/CD, automated builds, tests, and deployment.",
+  link: "https://github.com/iheb137/iHar---Luxury-Car-Rental",
+}
+
   {
     title: "Clinic Management",
     description:
