@@ -1,248 +1,190 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { Award, Plus, Briefcase, Calendar, Building2 } from "lucide-react"
+import { Briefcase, Calendar, Building2, Shield, Clock, CheckCircle2, BookOpen, ExternalLink } from "lucide-react"
 
 export default function CertificationsPage() {
-  const internships = [
-    {
-      title: "DevOps Internship",
-      company: "BIAT-IT",
-      logo: "/biat-logo.jpg", // Ajoutez le logo dans public/
-      duration: "August 1, 2025 - Septembre 30, 2025",
-      period: "2 months",
-      description:
-        "DevOps engineering internship focusing on CI/CD pipelines, containerization, and cloud infrastructure automation.",
-      technologies: ["Docker", "Kubernetes", "OvTools", "Jira", "Git"],
-      status: "upcoming", // upcoming, current, completed
-    },
-    // Vous pouvez ajouter d'autres stages ici
-  ]
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "upcoming":
-        return "from-blue-600 to-cyan-600"
-      case "current":
-        return "from-green-600 to-emerald-600"
-      case "completed":
-        return "from-purple-600 to-pink-600"
-      default:
-        return "from-gray-600 to-gray-700"
-    }
-  }
-
-  const getStatusText = (status: string) => {
-    switch (status) {
-      case "upcoming":
-        return "Upcoming"
-      case "current":
-        return "In Progress"
-      case "completed":
-        return "Completed"
-      default:
-        return "Unknown"
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gray-950">
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* En-tête */}
+      <div className="max-w-5xl mx-auto px-4 py-16">
+
+        {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">Certifications & Internships</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            My professional qualifications, certifications, and internship experiences
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
+            Experience & Certifications
+          </h1>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Real-world internships and the certifications I'm actively working toward
           </p>
         </div>
 
-        <div className="space-y-12">
-          {/* Section Certifications */}
-          <div>
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="p-3 bg-gradient-to-r from-orange-600 to-red-600 rounded-full">
-                <Award className="h-8 w-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-100">Professional Certifications</h2>
-                <p className="text-gray-400">Industry-recognized qualifications</p>
-              </div>
+        {/* ── INTERNSHIPS ── */}
+        <section className="mb-16">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2.5 bg-blue-600/20 rounded-xl border border-blue-500/30">
+              <Briefcase className="h-6 w-6 text-blue-400" />
             </div>
-
-            <Card className="p-12 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 text-center">
-              <div className="space-y-8">
-                <div className="w-24 h-24 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto">
-                  <Award className="h-12 w-12 text-white" />
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-gray-100">Upcoming Certifications</h3>
-                  <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                    I am currently working on obtaining professional certifications in DevOps and cloud computing. This
-                    section will be updated with my future certifications.
-                  </p>
-                </div>
-
-                {/* Objectifs de certification */}
-                <div className="bg-gray-800/50 p-6 rounded-lg max-w-2xl mx-auto">
-                  <h4 className="text-xl font-semibold text-orange-400 mb-4">🎯 2024-2025 Goals</h4>
-                  <div className="space-y-3 text-left">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span className="text-gray-300">AWS Certified Solutions Architect</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span className="text-gray-300">Docker Certified Associate</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span className="text-gray-300">Kubernetes Administrator (CKA)</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Structure pour futures certifications */}
-                <div className="pt-8 border-t border-gray-700">
-                  <h4 className="text-lg font-semibold text-gray-100 mb-4">Future Certifications Structure</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Template de certification */}
-                    <div className="bg-gray-800/30 border-2 border-dashed border-gray-600 p-6 rounded-lg">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="p-3 bg-gray-700/50 rounded-full">
-                          <Plus className="h-6 w-6 text-gray-500" />
-                        </div>
-                        <div>
-                          <h5 className="text-lg font-semibold text-gray-500">Certification Name</h5>
-                          <p className="text-gray-600">Organization - Date</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-600 text-sm">Certification description...</p>
-                    </div>
-
-                    <div className="bg-gray-800/30 border-2 border-dashed border-gray-600 p-6 rounded-lg">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="p-3 bg-gray-700/50 rounded-full">
-                          <Plus className="h-6 w-6 text-gray-500" />
-                        </div>
-                        <div>
-                          <h5 className="text-lg font-semibold text-gray-500">Certification Name</h5>
-                          <p className="text-gray-600">Organization - Date</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-600 text-sm">Certification description...</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-100">Professional Internships</h2>
+              <p className="text-sm text-gray-500">Hands-on industry experience</p>
+            </div>
           </div>
 
-          {/* Section Stages Professionnels */}
-          <div>
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full">
-                <Briefcase className="h-8 w-8 text-white" />
+          {/* BIAT Card — featured */}
+          <div className="relative rounded-2xl border border-blue-500/30 bg-gradient-to-br from-gray-900 via-gray-900 to-blue-950/40 p-8 overflow-hidden">
+            {/* Background glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative flex flex-col lg:flex-row gap-8">
+              {/* Left — logo + status */}
+              <div className="flex flex-col items-center lg:items-start gap-4 lg:w-48 shrink-0">
+                <div className="w-20 h-20 rounded-2xl border-2 border-gray-700 bg-gray-800 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/biat-logo.jpg"
+                    alt="BIAT logo"
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.parentElement!.innerHTML = '<span class="text-2xl font-bold text-blue-400">B</span>'
+                    }}
+                  />
+                </div>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/25">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  Upcoming
+                </span>
               </div>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-100">Professional Internships</h2>
-                <p className="text-gray-400">Hands-on experience in the industry</p>
-              </div>
-            </div>
 
-            <div className="grid grid-cols-1 gap-6">
-              {internships.map((internship, index) => (
-                <Card
-                  key={index}
-                  className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 hover:border-blue-600/50 transition-all duration-300"
-                >
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-6 lg:space-y-0">
-                    {/* Informations principales */}
-                    <div className="flex-1 space-y-4">
-                      <div className="flex items-start space-x-4">
-                        {/* Logo de l'entreprise */}
-                        <div className="flex-shrink-0">
-                          <div className="w-16 h-16 bg-gray-800 rounded-lg border-2 border-gray-600 flex items-center justify-center overflow-hidden">
-                            <img
-                              src={internship.logo || "/placeholder.svg"}
-                              alt={`${internship.company} logo`}
-                              className="w-full h-full object-contain"
-                              onError={(e) => {
-                                e.currentTarget.src = "/placeholder.svg?height=64&width=64"
-                                e.currentTarget.alt = "Company logo"
-                              }}
-                            />
-                          </div>
-                        </div>
+              {/* Right — details */}
+              <div className="flex-1 space-y-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-100">DevOps Internship</h3>
+                  <div className="flex items-center gap-2 mt-1">
+                    <Building2 className="h-4 w-4 text-blue-400" />
+                    <span className="text-blue-400 font-semibold text-lg">BIAT – IT Department</span>
+                  </div>
+                </div>
 
-                        {/* Détails du stage */}
-                        <div className="flex-1 space-y-3">
-                          <div>
-                            <h3 className="text-2xl font-bold text-gray-100">{internship.title}</h3>
-                            <div className="flex items-center space-x-2 mt-1">
-                              <Building2 className="h-4 w-4 text-blue-400" />
-                              <span className="text-lg text-blue-400 font-medium">{internship.company}</span>
-                            </div>
-                          </div>
+                <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                  <div className="flex items-center gap-1.5">
+                    <Calendar className="h-4 w-4 text-green-400" />
+                    <span>August 1 – September 30, 2025</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Clock className="h-4 w-4 text-purple-400" />
+                    <span>2 months</span>
+                  </div>
+                </div>
 
-                          <div className="flex flex-wrap items-center gap-4 text-gray-300">
-                            <div className="flex items-center space-x-2">
-                              <Calendar className="h-4 w-4 text-green-400" />
-                              <span className="text-sm">{internship.duration}</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                              <span className="text-sm font-medium">{internship.period}</span>
-                            </div>
-                          </div>
+                <p className="text-gray-300 leading-relaxed">
+                  DevOps engineering internship at one of Tunisia's leading banks, focusing on CI/CD pipeline automation,
+                  containerization with Docker & Kubernetes, and cloud infrastructure management.
+                </p>
 
-                          <p className="text-gray-400 leading-relaxed">{internship.description}</p>
-
-                          {/* Technologies */}
-                          <div className="space-y-2">
-                            <h4 className="text-sm font-semibold text-gray-100">Key Technologies:</h4>
-                            <div className="flex flex-wrap gap-2">
-                              {internship.technologies.map((tech, techIndex) => (
-                                <span
-                                  key={techIndex}
-                                  className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs font-medium rounded-full border border-blue-800/50"
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Badge de statut */}
-                    <div className="flex-shrink-0">
-                      <div
-                        className={`px-6 py-3 bg-gradient-to-r ${getStatusColor(internship.status)} rounded-full text-center`}
+                {/* Technologies */}
+                <div>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Technologies</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Docker", "Kubernetes", "OvTools", "Jira", "Git", "CI/CD"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs font-medium rounded-full border border-blue-800/50"
                       >
-                        <span className="text-white font-bold text-sm">{getStatusText(internship.status)}</span>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-
-              {/* Placeholder pour futurs stages */}
-              <Card className="p-8 bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-dashed border-gray-600">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-gray-700/50 rounded-full flex items-center justify-center mx-auto">
-                    <Briefcase className="h-8 w-8 text-gray-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-500">Future Internships</h3>
-                    <p className="text-gray-600 text-sm">Additional internship opportunities will be added here</p>
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
-        </div>
+
+          {/* Summer 2026 internship search */}
+          <div className="mt-4 rounded-2xl border border-dashed border-green-500/30 bg-green-950/10 p-6">
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              <div>
+                <p className="text-green-400 font-semibold text-sm">Open to Opportunities</p>
+                <p className="text-gray-400 text-sm mt-0.5">
+                  Actively seeking a <span className="text-white font-medium">2-month internship for July – August 2026</span> (2nd year GLSI).
+                  Open to DevOps, Cloud, or Full-Stack roles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── CERTIFICATIONS ── */}
+        <section>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2.5 bg-purple-600/20 rounded-xl border border-purple-500/30">
+              <Shield className="h-6 w-6 text-purple-400" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-100">Certifications</h2>
+              <p className="text-sm text-gray-500">Industry-recognized qualifications</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            {/* CKA — In Progress (featured) */}
+            <div className="md:col-span-2 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-gray-900 to-purple-950/30 p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+                {/* CKA logo area */}
+                <div className="shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-700 to-blue-700 flex items-center justify-center">
+                  <span className="text-white text-2xl font-black tracking-tight">CKA</span>
+                </div>
+
+                <div className="flex-1 space-y-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h3 className="text-xl font-bold text-gray-100">Certified Kubernetes Administrator</h3>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25">
+                      <BookOpen className="h-3 w-3" />
+                      Preparing
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-400">
+                    <span className="text-gray-300 font-medium">Linux Foundation</span> · Cloud Native Computing Foundation (CNCF)
+                  </p>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    Hands-on exam validating skills in Kubernetes cluster administration, workload management,
+                    networking, storage, and security. Actively studying and practicing on real clusters.
+                  </p>
+
+                  {/* Progress bar */}
+                  <div>
+                    <div className="flex justify-between text-xs text-gray-500 mb-1.5">
+                      <span>Preparation progress</span>
+                      <span className="text-purple-400 font-medium">In progress</span>
+                    </div>
+                    <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"
+                        style={{ width: '45%' }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {["Kubernetes", "kubectl", "RBAC", "Networking", "Storage", "Security"].map((topic) => (
+                      <span key={topic} className="px-2.5 py-1 bg-purple-900/30 text-purple-300 text-xs rounded-full border border-purple-800/40">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </section>
+
       </div>
     </div>
   )
