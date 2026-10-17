@@ -610,7 +610,7 @@ export default function Home() {
             <div className="hm-in flex flex-wrap items-center gap-4" style={delay(0)}>
               <span className="relative grid h-16 w-16 shrink-0 place-items-center">
                 <span aria-hidden="true" className="hm-spin absolute inset-0 rounded-full bg-[conic-gradient(#2dd4bf,#818cf8,#fbbf24,#2dd4bf)]" />
-                <Image src="/iheb.jpg" alt="Iheb Eddine Saafi" width={400} height={358} priority className="relative h-[58px] w-[58px] rounded-full border-[3px] border-[#070c18] object-cover" />
+                <Image src="/iheb.jpeg" alt="Iheb Eddine Saafi" width={400} height={358} priority className="relative h-[58px] w-[58px] rounded-full border-[3px] border-[#070c18] object-cover" />
               </span>
               <p className="inline-flex items-center gap-2.5 rounded-2xl border border-amber-300/30 bg-amber-300/10 px-4 py-1.5 text-sm text-amber-300">
                 <span className="relative flex h-2 w-2">
