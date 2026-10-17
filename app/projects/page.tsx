@@ -1009,9 +1009,8 @@ const PROJECTS: Project[] = [
     "evidence": [],
     "interviewTopics": [],
     "repo": "https://github.com/iheb137/Gestion-de-clinique-"
-  }
-  
-{
+  },
+  {
   "slug": "edu-tek",
   "title": {
     "fr": "Edu-Tek : plateforme de suivi académique et d'accompagnement par l'IA",
@@ -1032,7 +1031,7 @@ const PROJECTS: Project[] = [
   },
   "period": {
     "fr": "Septembre – octobre 2026",
-    "en": "Septembre – octobre 2026"
+    "en": "September – October 2026"
   },
   "myRole": {
     "fr": "À personnaliser selon ta contribution réelle au projet : développement full-stack, intégration du service d'intelligence artificielle, industrialisation CI/CD, conteneurisation Docker, déploiement Kubernetes et automatisation GitOps.",
