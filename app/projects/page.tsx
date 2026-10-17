@@ -1010,6 +1010,260 @@ const PROJECTS: Project[] = [
     "interviewTopics": [],
     "repo": "https://github.com/iheb137/Gestion-de-clinique-"
   }
+  
+{
+  "slug": "edu-tek",
+  "title": {
+    "fr": "Edu-Tek : plateforme de suivi académique et d'accompagnement par l'IA",
+    "en": "Edu-Tek: AI-Powered Academic Monitoring and Student Support Platform"
+  },
+  "short": {
+    "fr": "Edu-Tek",
+    "en": "Edu-Tek"
+  },
+  "tagline": {
+    "fr": "Plateforme académique full-stack intégrant l'intelligence artificielle, l'automatisation des notifications et une infrastructure Kubernetes déployée selon une approche GitOps.",
+    "en": "Full-stack academic platform integrating artificial intelligence, automated notifications, and a Kubernetes infrastructure deployed using a GitOps approach."
+  },
+  "context": "team",
+  "setting": {
+    "fr": "Projet semestriel en 5e année Génie Logiciel et Systèmes d'Information, TEK-UP University",
+    "en": "Semester project in the 5th year of Software Engineering and Information Systems, TEK-UP University"
+  },
+  "period": {
+    "fr": "Septembre – octobre 2026",
+    "en": "Septembre – octobre 2026"
+  },
+  "myRole": {
+    "fr": "À personnaliser selon ta contribution réelle au projet : développement full-stack, intégration du service d'intelligence artificielle, industrialisation CI/CD, conteneurisation Docker, déploiement Kubernetes et automatisation GitOps.",
+    "en": "Customize according to your actual contribution to the project: full-stack development, AI service integration, CI/CD engineering, Docker containerization, Kubernetes deployment, and GitOps automation."
+  },
+  "teamNote": {
+    "fr": "Projet académique intégrant une application Angular, une API Spring Boot, un service de prédiction IA en Python et une infrastructure conteneurisée. Les responsabilités individuelles sont à préciser selon la répartition réelle du travail.",
+    "en": "Academic project integrating an Angular application, a Spring Boot API, a Python-based AI prediction service, and a containerized infrastructure. Individual responsibilities should be specified according to the actual division of work."
+  },
+  "summary": {
+    "fr": "Edu-Tek centralise la gestion de la vie académique d'un établissement : organisation pédagogique, assiduité, évaluations, résultats, démarches administratives, communication et suivi des rémunérations. La plateforme intègre un service d'intelligence artificielle basé sur un réseau GRU pour estimer le risque d'échec académique à partir d'indicateurs semestriels et fournir des facteurs explicatifs. L'infrastructure repose sur une architecture distribuée composée d'Angular, Spring Boot, FastAPI et PostgreSQL, déployée sur Kubernetes avec Argo CD pour la synchronisation GitOps. Une chaîne CI/CD automatise les tests, la construction des images, l'analyse de sécurité et les contrôles après déploiement.",
+    "en": "Edu-Tek centralizes an institution's academic operations, including educational organization, attendance, assessments, results, administrative requests, communication, and payroll tracking. The platform integrates a GRU-based artificial intelligence service to estimate academic failure risk from semester-level indicators and provide explanatory factors. Its distributed architecture combines Angular, Spring Boot, FastAPI, and PostgreSQL, deployed on Kubernetes with Argo CD for GitOps synchronization. A CI/CD pipeline automates testing, image builds, security scanning, and post-deployment verification."
+  },
+  "stack": [
+    "Angular 21",
+    "TypeScript",
+    "Spring Boot 4",
+    "Java 17",
+    "Spring Security",
+    "JWT",
+    "Hibernate",
+    "Python 3.12",
+    "FastAPI",
+    "PyTorch",
+    "GRU",
+    "scikit-learn",
+    "PostgreSQL 16",
+    "Docker",
+    "Kubernetes",
+    "Kustomize",
+    "Argo CD",
+    "GitHub Actions",
+    "GitHub Container Registry",
+    "Trivy",
+    "Gitleaks",
+    "n8n",
+    "Gmail"
+  ],
+  "highlights": [
+    {
+      "fr": "Architecture distribuée en trois services applicatifs : frontend Angular, backend Spring Boot sécurisé par JWT et service de prédiction FastAPI utilisant PyTorch.",
+      "en": "Three-service application architecture: Angular frontend, JWT-secured Spring Boot backend, and a FastAPI prediction service powered by PyTorch."
+    },
+    {
+      "fr": "Pipeline CI/CD/CT : détection des secrets avec Gitleaks, tests backend et IA, build frontend, construction des images Docker, analyse Trivy et publication sur GitHub Container Registry.",
+      "en": "CI/CD/CT pipeline: secret detection with Gitleaks, backend and AI tests, frontend build, Docker image creation, Trivy scanning, and publishing to GitHub Container Registry."
+    },
+    {
+      "fr": "Déploiement Kubernetes piloté par Argo CD avec synchronisation automatique, self-healing et mise à jour des images par identifiant de commit.",
+      "en": "Argo CD-managed Kubernetes deployment with automatic synchronization, self-healing, and commit-specific image updates."
+    },
+    {
+      "fr": "Modèle GRU avec probabilités calibrées et facteurs explicatifs, évalué sur des données synthétiques générées à partir du plan d'études GLSI.",
+      "en": "GRU model with calibrated probabilities and explanatory factors, evaluated on synthetic data generated from the GLSI curriculum."
+    },
+    {
+      "fr": "Automatisation des notifications par e-mail via n8n et Gmail, avec suivi des envois et journalisation des exécutions.",
+      "en": "Email notification automation through n8n and Gmail, including delivery tracking and execution logging."
+    }
+  ],
+  "architecture": [
+    {
+      "name": "front",
+      "tech": "Angular 21 + nginx",
+      "role": {
+        "fr": "Interface utilisateur et portail académique",
+        "en": "User interface and academic portal"
+      }
+    },
+    {
+      "name": "backend",
+      "tech": "Spring Boot 4 + Java 17 + Spring Security + JWT",
+      "role": {
+        "fr": "API REST, logique métier, authentification et gestion des données académiques",
+        "en": "REST API, business logic, authentication, and academic data management"
+      }
+    },
+    {
+      "name": "ia",
+      "tech": "FastAPI + PyTorch + GRU",
+      "role": {
+        "fr": "Prédiction du risque académique et génération de facteurs explicatifs",
+        "en": "Academic risk prediction and generation of explanatory factors"
+      }
+    },
+    {
+      "name": "postgres",
+      "tech": "PostgreSQL 16",
+      "role": {
+        "fr": "Persistance des données relationnelles",
+        "en": "Relational data persistence"
+      }
+    },
+    {
+      "name": "kubernetes",
+      "tech": "Kubernetes + Kustomize + Ingress NGINX",
+      "role": {
+        "fr": "Orchestration des conteneurs, exposition des services et gestion des déploiements",
+        "en": "Container orchestration, service exposure, and deployment management"
+      }
+    },
+    {
+      "name": "argocd",
+      "tech": "Argo CD",
+      "role": {
+        "fr": "Déploiement continu selon l'approche GitOps et réconciliation de l'état du cluster",
+        "en": "GitOps continuous deployment and cluster state reconciliation"
+      }
+    },
+    {
+      "name": "n8n",
+      "tech": "n8n + Gmail",
+      "role": {
+        "fr": "Automatisation des notifications par e-mail",
+        "en": "Email notification automation"
+      }
+    }
+  ],
+  "verification": [
+    {
+      "fr": "Service IA : 16 tests pytest réussis selon le README du dépôt.",
+      "en": "AI service: 16 pytest tests passing according to the repository README."
+    },
+    {
+      "fr": "Backend : 1 test JUnit documenté, avec démarrage complet sur PostgreSQL.",
+      "en": "Backend: 1 documented JUnit test, including full startup against PostgreSQL."
+    },
+    {
+      "fr": "Frontend : build de production Angular validé.",
+      "en": "Frontend: Angular production build validated."
+    },
+    {
+      "fr": "Sécurité : contrôles Gitleaks et Trivy intégrés à la chaîne CI.",
+      "en": "Security: Gitleaks and Trivy checks integrated into the CI pipeline."
+    },
+    {
+      "fr": "Après déploiement : Job smoke-tests avec 7 vérifications documentées.",
+      "en": "Post-deployment: smoke-tests Job with 7 documented checks."
+    }
+  ],
+  "deployment": {
+    "fr": "Déploiement sur Kubernetes, notamment via Minikube pour l'environnement local. Les images frontend, backend et IA sont publiées sur GitHub Container Registry avec des tags sha-<commit>. La CI met à jour k8s/kustomization.yaml, puis Argo CD synchronise l'état souhaité du cluster. Les ressources Kubernetes comprennent les Deployments, Services, un StatefulSet PostgreSQL avec stockage persistant, un Ingress NGINX et un Job de smoke tests exécuté après synchronisation. Les secrets sont fournis au cluster séparément du dépôt Git.",
+    "en": "Deployment to Kubernetes, including Minikube for the local environment. Frontend, backend, and AI images are published to GitHub Container Registry with sha-<commit> tags. CI updates k8s/kustomization.yaml, after which Argo CD synchronizes the desired cluster state. Kubernetes resources include Deployments, Services, a PostgreSQL StatefulSet with persistent storage, an NGINX Ingress, and a smoke-test Job executed after synchronization. Secrets are supplied to the cluster separately from the Git repository."
+  },
+  "evidence": [
+    {
+      "label": {
+        "fr": "Dépôt principal",
+        "en": "Main repository"
+      },
+      "path": "README.md",
+      "href": "https://github.com/iheb137/EDU-TEK-"
+    },
+    {
+      "label": {
+        "fr": "Pipeline CI/CD",
+        "en": "CI/CD pipeline"
+      },
+      "path": ".github/workflows/ci.yml",
+      "href": "https://github.com/iheb137/EDU-TEK-/blob/main/.github/workflows/ci.yml"
+    },
+    {
+      "label": {
+        "fr": "Manifestes Kubernetes",
+        "en": "Kubernetes manifests"
+      },
+      "path": "k8s/",
+      "href": "https://github.com/iheb137/EDU-TEK-/tree/main/k8s"
+    },
+    {
+      "label": {
+        "fr": "Configuration Argo CD",
+        "en": "Argo CD configuration"
+      },
+      "path": "argocd/edutek-app.yaml",
+      "href": "https://github.com/iheb137/EDU-TEK-/blob/main/argocd/edutek-app.yaml"
+    },
+    {
+      "label": {
+        "fr": "Service d'intelligence artificielle",
+        "en": "Artificial intelligence service"
+      },
+      "path": "edutek-ia/README.md",
+      "href": "https://github.com/iheb137/EDU-TEK-/blob/main/edutek-ia/README.md"
+    },
+    {
+      "label": {
+        "fr": "Contrat du service IA",
+        "en": "AI service contract"
+      },
+      "path": "docs/contrat-service-ia.md",
+      "href": "https://github.com/iheb137/EDU-TEK-/blob/main/docs/contrat-service-ia.md"
+    },
+    {
+      "label": {
+        "fr": "Intégration n8n",
+        "en": "n8n integration"
+      },
+      "path": "docs/integration-n8n.md",
+      "href": "https://github.com/iheb137/EDU-TEK-/blob/main/docs/integration-n8n.md"
+    }
+  ],
+  "interviewTopics": [
+    {
+      "fr": "Concevoir une architecture distribuée reliant Angular, Spring Boot et FastAPI.",
+      "en": "Designing a distributed architecture connecting Angular, Spring Boot, and FastAPI."
+    },
+    {
+      "fr": "Sécuriser une API multi-établissement avec JWT et un contrôle d'accès par rôle.",
+      "en": "Securing a multi-tenant API with JWT and role-based access control."
+    },
+    {
+      "fr": "Construire une chaîne CI/CD intégrant les tests, la détection des secrets et l'analyse des vulnérabilités des images.",
+      "en": "Building a CI/CD pipeline integrating tests, secret detection, and container image vulnerability scanning."
+    },
+    {
+      "fr": "Mettre en œuvre GitOps avec Argo CD, Kustomize, synchronisation automatique et self-healing.",
+      "en": "Implementing GitOps with Argo CD, Kustomize, automatic synchronization, and self-healing."
+    },
+    {
+      "fr": "Évaluer un modèle GRU calibré et interpréter ses prédictions à partir de données synthétiques.",
+      "en": "Evaluating a calibrated GRU model and interpreting its predictions using synthetic data."
+    },
+    {
+      "fr": "Concevoir des tests de fumée post-déploiement et assurer la cohérence entre le dépôt Git et le cluster Kubernetes.",
+      "en": "Designing post-deployment smoke tests and maintaining consistency between the Git repository and Kubernetes cluster."
+    }
+  ],
+  "repo": "https://github.com/iheb137/EDU-TEK-"
+}
+
 ]
 
 const T = {
