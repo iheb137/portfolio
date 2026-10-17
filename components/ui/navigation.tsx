@@ -136,7 +136,7 @@ export function Navigation() {
             <span className="relative grid h-12 w-12 shrink-0 place-items-center">
               <span aria-hidden="true" className="nv-spin absolute inset-0 rounded-full bg-[conic-gradient(#2dd4bf,#818cf8,#fbbf24,#2dd4bf)] opacity-90 transition-opacity group-hover:opacity-100" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/iheb.jpg" alt="" width={44} height={44} className="relative h-11 w-11 rounded-full border-[3px] border-[#070c18] object-cover" />
+              <img src="/iheb.jpeg" alt="" width={44} height={44} className="relative h-11 w-11 rounded-full border-[3px] border-[#070c18] object-cover" />
               <span aria-hidden="true" className="absolute bottom-0 right-0 flex h-3.5 w-3.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-300 opacity-60" />
                 <span className="relative inline-flex h-3.5 w-3.5 rounded-full border-2 border-[#070c18] bg-teal-300" />
